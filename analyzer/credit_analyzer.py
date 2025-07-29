@@ -8,22 +8,23 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def analisar_cliente(texto_pdf):
     prompt = f"""
 Você é um analista de crédito.  
-A partir das informações do boleto a seguir, avalie:
+Extraia do texto do boleto abaixo:
 
-1. Serasa Score
-2. Anotações Negativas
-3. Renda Estimada
-4. Capacidade de pagamento
-5. Comprometimento de renda
-6. Histórico de Pagamento
-7. Recomenda conceder crédito? (Sim/Não)
-8. Limite mensal sugerido
-
-Boleto:
 {texto_pdf}
+
+- Nome completo do cliente
+- Serasa Score (apenas número)
+- Anotações negativas resumidas (ex: "6 dívidas, 2 protestos")
+- Renda estimada mensal (ex: "R$ 5000")
+- Capacidade de pagamento mensal (valor numérico ou em reais)
+- Comprometimento de renda percentual (ex: "25%")
+- Histórico de pagamento resumido (ex: "Bom", "Regular", "Ruim")
+- Recomenda concessão de crédito? (Sim/Não)
+- Limite mensal sugerido em reais (apenas valor ou "0" se não recomendado)
 
 Responda em JSON estruturado assim:
 {{
+  "nome_cliente": "",
   "serasa_score": "",
   "anotacoes_negativas": "",
   "renda_estimada": "",

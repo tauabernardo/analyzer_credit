@@ -5,9 +5,11 @@ if __name__ == "__main__":
     caminho_boleto = "analyzer/data/relatoriocliente1.pdf"  # caminho correto para o seu arquivo
     texto = extrair_texto_pdf(caminho_boleto)
     
-    print("Texto processado e limpo do boleto:")
-    print(texto)
 
     resultado = analisar_cliente(texto)
     print("Análise de Crédito:")
     print(resultado)
+
+    dados = json.loads(resultado)
+    salvar_analise(dados)
+    print("Análise salva no PostgreSQL!")
