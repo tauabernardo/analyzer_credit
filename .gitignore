@@ -7,9 +7,10 @@ __pycache__/
 .env
 
 # PDFs e dados temporários
-data/*.pdf
 data/*.json
 
 # Arquivos de IDE
 .vscode/
 .idea/
+
+*.pdf
