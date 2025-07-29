@@ -1,0 +1,15 @@
+# Ambiente virtual Python
+venv/
+__pycache__/
+*.pyc
+
+# Arquivos sensíveis
+.env
+
+# PDFs e dados temporários
+data/*.pdf
+data/*.json
+
+# Arquivos de IDE
+.vscode/
+.idea/
