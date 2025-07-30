@@ -13,4 +13,9 @@ data/*.json
 .vscode/
 .idea/
 
+# PDFs (evitar subir PDFs)
 *.pdf
+
+# Pastas de build geradas pelo PyInstaller
+dist/
+build/
