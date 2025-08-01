@@ -14,7 +14,7 @@ Extraia do texto do boleto abaixo:
 
 - Nome completo do cliente
 - Serasa Score (ex: 350, valor que fica no inicio do texto próximo a Serasa Score)
-- Anotações negativas **bem resumidas** (apenas quantidade + tipo, ex: "6 financeiras, 6 protestos")
+- Anotações negativas **bem resumidas** (soma a quantidade de anotações e coloca o valor cheio, ex: 12)
 - Renda estimada mensal (ex: "R$ 5000", tem que ser o valor de renda estimada e não renda mais)
 - Capacidade de pagamento mensal (valor numérico ou em reais)
 - Comprometimento de renda percentual (ex: "25%")
